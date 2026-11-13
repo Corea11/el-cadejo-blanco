@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Cadejo Blanco | Sabor e Historia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de Navegación -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#inicio" class="brand">
+        <img src="img/logo.jpeg" alt="Logotipo El Cadejo Blanco" class="nav-logo">
+        <div>
+          <span class="brand-title">EL CADEJO BLANCO</span>
+          <span class="brand-slogan">Sabor e Historia</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#esencia">Nuestra Esencia</a>
+        <a href="#catalogo">Catálogo e Historia</a>
+        <a href="#inclusion">Línea Inclusiva</a>
+        <button id="toggle-contrast" class="btn-accessibility" aria-label="Alternar modo alto contraste">
+          👁️ Alto Contraste
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Portada -->
+  <section id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge">Gastronomía Ancestral Nicaragüense</span>
+        <h1>El sabor de nuestras tradiciones al alcance de todos</h1>
+        <p>
+          Como el espíritu protector de los caminos, custodiamos las recetas autóctonas de Nicaragua[cite: 3]. 
+          Cada cajeta es una medalla artesanal que une nuestro pasado precolombino con opciones saludables e inclusivas para cada familia[cite: 3].
+        </p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn-primary">Explorar Catálogo e Historias</a>
+          <a href="#inclusion" class="btn-secondary">Conocer Línea Inclusiva</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="logo-medallion">
+          <img src="img/logo.jpeg" alt="Glifo artesanal El Cadejo Blanco">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner de Nuestra Colección -->
+  <section id="esencia" class="showcase">
+    <div class="container showcase-grid">
+      <div class="showcase-img-wrapper">
+        <img src="img/cajetas.jpg" alt="Variedad de cajetas tradicionales El Cadejo Blanco">
+        <span class="img-caption">Medallas artesanales elaboradas con productores locales de Masaya y Monimbó[cite: 3].</span>
+      </div>
+      <div class="showcase-info">
+        <h2>Más que un dulce, memoria viva</h2>
+        <p>
+          Nuestro glifo circular honra la silueta tradicional de las cajetas nicaragüenses, enmarcado por volcanes, olas de agua y maíz[cite: 1, 3]. Trabajamos de la mano con dulceros artesanales para preservar el punto exacto de cocción en perol de cobre y paleta de madera.
+        </p>
+        <ul class="values-list">
+          <li><strong>Raíz Cultural:</strong> Rescate de recetas tradicionales de Masaya, Granada y León.</li>
+          <li><strong>Inclusión Real:</strong> Versiones aptas para personas con diabetes e intolerancia a la lactosa[cite: 3].</li>
+          <li><strong>Diseño Accesible:</strong> Etiquetado con relieve Braille y audio-historias integradas[cite: 3].</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo Interactivo -->
+  <section id="catalogo" class="catalog-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Recetario y Origen</span>
+        <h2>Catálogo de Cajetas y Dulces Tradicionales</h2>
+        <p>Selecciona un dulce para descubrir su departamento de origen, su historia cultural y su proceso de preparación artesanal.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-bar" role="group" aria-label="Filtrar cajetas por categoría">
+        <button class="filter-btn active" data-filter="todos">Todos los Sabores (7)</button>
+        <button class="filter-btn" data-filter="tradicional">Receta Tradicional</button>
+        <button class="filter-btn" data-filter="cero">🌿 Cadejo Cero (Sin Azúcar)</button>
+        <button class="filter-btn" data-filter="vegana">🥥 Cadejo Vegana (Sin Lactosa)</button>
+      </div>
+
+      <!-- Grid de Tarjetas (se llena dinámicamente desde app.js) -->
+      <div id="catalog-grid" class="catalog-grid"></div>
+    </div>
+  </section>
+
+  <!-- Sección Línea de Inclusión -->
+  <section id="inclusion" class="inclusion-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Compromiso Social y Salud</span>
+        <h2>Nuestros 3 Pilares de Inclusión</h2>
+        <p>Creemos que nadie debe quedarse sin disfrutar el sabor de su tierra.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <article class="pillar-card">
+          <div class="pillar-icon">🌿</div>
+          <h3>Línea "Cadejo Cero"</h3>
+          <p>
+            Diseñada especialmente para personas con <strong>diabetes</strong> o regímenes bajos en calorías[cite: 3]. Sustituimos el azúcar refinada por <strong>estevia natural y alternativas de bajo índice glucémico</strong>, conservando la textura cremosa tradicional[cite: 3].
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-icon">🥥</div>
+          <h3>Línea "Cadejo Vegana"</h3>
+          <p>
+            Pensada para personas <strong>intolerantes a la lactosa</strong> o con alimentación basada en plantas[cite: 3]. Reemplazamos la leche de vaca por <strong>leche artesanal de coco o almendras</strong>, logrando un sabor tropical auténtico.
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-icon">⠃</div>
+          <h3>Empaque y Cultura Accesible</h3>
+          <p>
+            Incorporamos <strong>lectura en relieve Braille</strong> en nuestras tapas, códigos QR con audio-descripciones (como el botón de escucha en esta web) y menciones en <strong>lengua Miskito</strong> para honrar nuestra Costa Caribe[cite: 3].
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>EL CADEJO BLANCO</h3>
+        <p>Gastronomía Ancestral e Inclusiva de Nicaragua[cite: 3].</p>
+        <p class="miskito-note"><em>"Nani tasbaia daukanka" — El dulce sabor de nuestra tierra.</em></p>
+      </div>
+      <div class="footer-contact">
+        <p><strong>Pedidos y Distribuidores:</strong></p>
+        <p>Masaya, Nicaragua • Envíos nacionales e internacionales[cite: 3]</p>
+        <a href="https://wa.me/50584270399?text=Hola%20El%20Cadejo%20Blanco,%20me%20gustaría%20conocer%20más%20sobre%20sus%20cajetas" target="_blank" class="btn-whatsapp">
+          💬 Hacer pedido por WhatsApp
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Historia y Preparación -->
+  <div id="product-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" id="close-modal-bg"></div>
+    <div class="modal-content">
+      <button id="close-modal" class="modal-close" aria-label="Cerrar ventana">&times;</button>
+      
+      <div class="modal-header" style="text-align: center;">
+        <div class="modal-medallion-frame">
+          <img id="modal-img" src="" alt="Cajeta artesanal">
+        </div>
+        <span id="modal-origin" class="badge">Origen</span>
+        <h2 id="modal-title">Nombre de la Cajeta</h2>
+        <div id="modal-tags" class="card-tags"></div>
+      </div>
+
+      <!-- Botón de Audio-Historia -->
+      <div class="audio-bar">
+        <button id="btn-speak" class="btn-audio">🔊 Escuchar historia y preparación</button>
+        <button id="btn-stop-speak" class="btn-audio-stop" hidden>⏹️ Detener audio</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="story-block">
+          <h3>📜 Historia y Tradición</h3>
+          <p id="modal-history"></p>
+        </div>
+        <div class="story-block">
+          <h3>🥣 Preparación Artesanal</h3>
+          <p id="modal-prep"></p>
+        </div>
+        <div class="story-block inclusion-box">
+          <h3>💚 Opciones Inclusivas Disponibles</h3>
+          <p id="modal-inclusion"></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modal-whatsapp" href="#" target="_blank" class="btn-primary">Pedir esta cajeta por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
